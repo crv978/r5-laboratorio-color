@@ -1,0 +1,140 @@
+.verificador {
+  display: grid;
+  gap: 1.25rem;
+}
+.selectores,
+.resultados,
+.previewZone {
+  background: #fff;
+  border: 1px solid #cbd3df;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+.selector {
+  border: 0;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+.selector legend {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.selector input[type="color"] {
+  width: 100%;
+  height: 44px;
+}
+.selector input[type="text"] {
+  width: 100%;
+}
+.error,
+.aviso {
+  color: #a20e22;
+  font-weight: 700;
+}
+.ratio {
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 800;
+}
+.resultados ul {
+  list-style: none;
+  padding: 0;
+}
+.resultados li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-bottom: 1px solid #d8dee8;
+  padding: 0.65rem 0;
+}
+.preview {
+  --texto: #767676;
+  --fondo: #fff;
+  color: var(--texto);
+  background: var(--fondo);
+  border: 3px solid #767676;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+.preview button {
+  color: var(--fondo);
+  background: var(--texto);
+}
+.secondary {
+  margin: 0.35rem 0.35rem 0.35rem 0;
+}
+.correccion {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #eef2f8;
+  border-radius: 0.5rem;
+}
+.palette {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.palette li {
+  min-width: 0;
+}
+.palette li button {
+  --tono: #fff;
+  width: 100%;
+  min-height: 88px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 0.75rem;
+  background: var(--tono);
+  color: #111;
+  border: 2px solid #111;
+}
+.palette li button small {
+  grid-column: 1/-1;
+}
+.swatches {
+  display: flex;
+  height: 70px;
+  border: 1px solid #cbd3df;
+}
+.swatches span {
+  flex: 1;
+}
+.saved {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.saved li {
+  border: 1px solid #cbd3df;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #fff;
+}
+@media (min-width: 768px) {
+  .verificador {
+    grid-template-columns: 1fr 1fr;
+  }
+  .previewZone {
+    grid-column: 1/-1;
+  }
+  .palette {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .verificador {
+    grid-template-columns: minmax(260px, 1fr) minmax(260px, 1fr) minmax(
+        280px,
+        1fr
+      );
+  }
+  .previewZone {
+    grid-column: auto;
+  }
+  .palette {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

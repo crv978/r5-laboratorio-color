@@ -1,0 +1,135 @@
+:root {
+  --bg: #f7f9fc;
+  --surface: #fff;
+  --text: #172033;
+  --muted: #59627a;
+  --primary: #2747a5;
+  --border: #cbd3df;
+  --error: #a20e22;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: var(--text);
+  background: var(--bg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 4vw, 3rem);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+footer {
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
+nav a,
+.brand {
+  padding: 0.65rem 0.8rem;
+  font-weight: 700;
+}
+nav a:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px #fff;
+}
+main {
+  width: min(100%, 1200px);
+  margin: auto;
+  padding: clamp(1rem, 4vw, 3rem);
+}
+h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  margin: 0 0 1.5rem;
+}
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+button {
+  min-height: 44px;
+  border: 1px solid #6f7890;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: var(--text);
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+button:hover {
+  background: #edf1f8;
+}
+input {
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  padding: 0.5rem;
+}
+label {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+.skip {
+  position: absolute;
+  left: -9999px;
+}
+.skip:focus {
+  left: 1rem;
+  top: 0.5rem;
+  background: #fff;
+  z-index: 99;
+  padding: 0.75rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111827;
+    --surface: #1f2937;
+    --text: #f7fafc;
+    --muted: #cbd5e1;
+    --primary: #a9baff;
+    --border: #64748b;
+  }
+  body {
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
