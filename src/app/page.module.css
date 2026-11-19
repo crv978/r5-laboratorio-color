@@ -5,8 +5,8 @@
 .selectores,
 .resultados,
 .previewZone {
-  background: #fff;
-  border: 1px solid #cbd3df;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 0.75rem;
   padding: 1rem;
 }
@@ -28,7 +28,7 @@
 }
 .error,
 .aviso {
-  color: #a20e22;
+  color: var(--error);
   font-weight: 700;
 }
 .ratio {
@@ -43,7 +43,7 @@
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
-  border-bottom: 1px solid #d8dee8;
+  border-bottom: 1px solid var(--border);
   padding: 0.65rem 0;
 }
 .preview {
@@ -65,7 +65,7 @@
 .correccion {
   margin-top: 1rem;
   padding: 0.75rem;
-  background: #eef2f8;
+  background: var(--bg);
   border-radius: 0.5rem;
 }
 .palette {
@@ -96,7 +96,7 @@
 .swatches {
   display: flex;
   height: 70px;
-  border: 1px solid #cbd3df;
+  border: 1px solid var(--border);
 }
 .swatches span {
   flex: 1;
@@ -108,10 +108,10 @@
   gap: 1rem;
 }
 .saved li {
-  border: 1px solid #cbd3df;
+  border: 1px solid var(--border);
   padding: 1rem;
   border-radius: 0.75rem;
-  background: #fff;
+  background: var(--surface);
 }
 @media (min-width: 768px) {
   .verificador {

@@ -44,6 +44,12 @@ nav a,
 .brand {
   padding: 0.65rem 0.8rem;
   font-weight: 700;
+  color: var(--text);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+a {
+  color: var(--primary);
 }
 nav a:focus-visible,
 a:focus-visible,
@@ -75,16 +81,21 @@ textarea {
 }
 button {
   min-height: 44px;
-  border: 1px solid #6f7890;
+  border: 1px solid var(--border);
   border-radius: 0.5rem;
-  background: #fff;
+  background: var(--surface);
   color: var(--text);
   padding: 0.65rem 1rem;
   cursor: pointer;
   font-weight: 700;
 }
 button:hover {
-  background: #edf1f8;
+  background: var(--bg);
+}
+input,
+textarea {
+  color: var(--text);
+  background: var(--surface);
 }
 input {
   min-height: 44px;
@@ -104,7 +115,8 @@ label {
 .skip:focus {
   left: 1rem;
   top: 0.5rem;
-  background: #fff;
+  background: var(--surface);
+  color: var(--text);
   z-index: 99;
   padding: 0.75rem;
 }
@@ -116,6 +128,7 @@ label {
     --muted: #cbd5e1;
     --primary: #a9baff;
     --border: #64748b;
+    --error: #ffb4c0;
   }
   body {
     color-scheme: dark;
