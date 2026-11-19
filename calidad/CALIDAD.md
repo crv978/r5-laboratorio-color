@@ -7,6 +7,10 @@
 - Pruebas: 14 aprobadas.
 - Cobertura de lógica de negocio: 97,93 %.
 
+## Dirección de producción
+
+- https://r5-laboratorio-color.vercel.app
+
 ## Evidencias pendientes de medición real
 
 Crear capturas del entorno de producción y guardar los resultados en esta carpeta:

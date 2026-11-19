@@ -25,7 +25,7 @@ npm run build
 ## Entrega
 
 - Código y documentos: repositorio de GitHub.
-- Producción: dirección de Vercel pendiente de publicar.
+- Producción: https://r5-laboratorio-color.vercel.app
 - Evidencias: `calidad/CALIDAD.md` y `calidad/CHECKLIST.md`.
 - Uso responsable de IA: `ia/`, incluido `ia/BITACORA.md`.
 
